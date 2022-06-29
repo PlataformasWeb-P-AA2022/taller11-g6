@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from administrativo.models import Edificio, Departamento
 
+
 class EdificioAdmin(admin.ModelAdmin):
 
     list_display = ('nombre', 'direccion', 'ciudad', 'tipo')
@@ -17,5 +18,6 @@ class DepartamentoAdmin(admin.ModelAdmin):
     search_fields = ('propietario', 'costo', 'Ncuartos', 'edificio')
 
     raw_id_fields = ('edificio',)
+
 
 admin.site.register(Departamento, DepartamentoAdmin)

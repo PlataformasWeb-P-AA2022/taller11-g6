@@ -18,6 +18,7 @@ class Edificio(models.Model):
                                 self.ciudad,
                                 self.tipo)
 
+
 class Departamento(models.Model):
 
     propietario = models.CharField("Nombre propietario", max_length=30)
@@ -26,7 +27,6 @@ class Departamento(models.Model):
     Ncuartos = models.IntegerField("Numero cuartos")
     edificio = models.ForeignKey(Edificio, on_delete=models.CASCADE,
                                  related_name="departamentos")
-
 
     def __str__(self):
         return "%s %s %s %s" % (self.propietario,

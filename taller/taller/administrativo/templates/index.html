@@ -1,0 +1,12 @@
+
+{% block content %}
+<ul>
+    {%for e in edificios%}
+    <li>
+        {{e.nombre}} {{e.direccion}} {{e.ciudad}} {{e.tipo_opciones}}
+        <ul>
+            {%for i in despartamentos.all%}
+        </ul>
+    </li>
+</ul>
+{% endblock %}

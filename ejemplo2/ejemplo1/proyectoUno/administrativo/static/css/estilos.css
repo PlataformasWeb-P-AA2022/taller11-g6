@@ -26,13 +26,13 @@ tr:hover {
   background-color: #258EAD;
 }
 
-input[type=text], input[type=number|email] {
+input[type=text], input[type=number]email {
   width: 25%;
   padding: 5px 5px;
   box-sizing: border-box;
 }
 
-input[type=text|number]:focus {
+input[type=text]number:focus {
   border: 3px solid blue;
 }
 

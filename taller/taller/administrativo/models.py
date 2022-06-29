@@ -23,7 +23,7 @@ class Departamento(models.Model):
     propietario = models.CharField("Nombre propietario", max_length=30)
     costo = models.DecimalField(
         "Costo departamento", max_digits=100, decimal_places=2)
-    numCuartos = models.IntegerField("Numero cuartos")
+    Ncuartos = models.IntegerField("Numero cuartos")
     edificio = models.ForeignKey(Edificio, on_delete=models.CASCADE,
                                  related_name="departamentos")
 
@@ -31,5 +31,5 @@ class Departamento(models.Model):
     def __str__(self):
         return "%s %s %s %s" % (self.propietario,
                                 self.costo,
-                                self.numCuartos,
+                                self.Ncuartos,
                                 self.edificio)

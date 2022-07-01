@@ -6,7 +6,7 @@ from administrativo.models import Edificio, Departamento
 class EdificioAdmin(admin.ModelAdmin):
 
     list_display = ('nombre', 'direccion', 'ciudad', 'tipo')
-    search_fields = ('nombre', 'direccion', 'ciudad', 'tipo')
+    search_fields = ('nombre', 'direccion')
 
 
 admin.site.register(Edificio, EdificioAdmin)
@@ -14,9 +14,7 @@ admin.site.register(Edificio, EdificioAdmin)
 
 class DepartamentoAdmin(admin.ModelAdmin):
 
-    list_display = ('propietario', 'costo', 'Ncuartos', 'edificio')
-    search_fields = ('propietario', 'costo', 'Ncuartos', 'edificio')
-
+    list_display = ('nombre_propietario', 'costo', 'num_cuartos', 'edificio')
     raw_id_fields = ('edificio',)
 
 

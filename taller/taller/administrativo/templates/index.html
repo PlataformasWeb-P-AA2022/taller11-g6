@@ -8,7 +8,7 @@ Listado de Edificios
 <h3>Número total de edificios: {{ numero_edificios }}</h3>
 
 <br>
-<table class="table table-bordered" id="tabla_edificios">
+<table id="tabla_edificios">
 
   <thead>
     <tr>
@@ -31,9 +31,9 @@ Listado de Edificios
       <td>
         <ul>
           {% for d in e.departamentos.all %}
-          <li class="mt-1">
-            <span>{{ d }} <a class="btn btn-primary btn-sm me-1"
-                href="{% url 'editar_departamento' d.id %}">Editar</a><a class="btn btn-danger btn-sm"
+          <li>
+            <span>{{ d }} <a
+                href="{% url 'editar_departamento' d.id %}">Editar</a><a 
                 href="{% url 'eliminar_departamento' d.id %}"
                 onclick="return confirm('¿Está seguro de la eliminación?')">Eliminar</a></span>
           </li>
@@ -45,9 +45,9 @@ Listado de Edificios
       </td>
       <td>
         <div class="opciones">
-          <a class="boton btn btn-success btn-sm" href="{% url 'obtener_edificio' e.id %}">Ver</a> <br>
-          <a class="boton btn btn-primary btn-sm" href="{% url 'editar_edificio' e.id %}">Editar</a> <br>
-          <a class="boton btn btn-danger btn-sm" href="{% url 'eliminar_edificio' e.id %}"
+          <a href="{% url 'obtener_edificio' e.id %}">Ver</a> <br>
+          <a href="{% url 'editar_edificio' e.id %}">Editar</a> <br>
+          <a href="{% url 'eliminar_edificio' e.id %}"
             onclick="return confirm('¿Está seguro de la eliminación?')">
             Eliminar</a>
         </div>

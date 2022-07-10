@@ -5,35 +5,35 @@
 
 <form action="" method="post">
   {% csrf_token %}
-  <div class="row">
-    <div class="col-6">
-      <div class="mb-3">
+  <div>
+    <div>
+      <div>
         {{ formulario.nombre.errors }}
-        <label for="nombre" class="form-label">Nombre del edificio: </label>
+        <label for="nombre">Nombre del edificio: </label>
         {{ formulario.nombre }}
       </div>
-      <div class="mb-3">
+      <div>
         {{ formulario.direccion.errors }}
-        <label for="direccion" class="form-label">Dirección del edificio: </label>
+        <label for="direccion">Dirección del edificio: </label>
         {{ formulario.direccion }}
       </div>
     </div>
-    <div class="col-6">
-      <div class="mb-3">
+    <div>
+      <div>
         {{ formulario.ciudad.errors }}
-        <label for="ciudad" class="form-label">Ciudad: </label>
+        <label for="ciudad">Ciudad: </label>
         {{ formulario.ciudad }}
       </div>
-      <div class="mb-3">
+      <div>
         {{ formulario.tipo.errors }}
-        <label for="tipo" class="form-label">Tipo: </label>
+        <label for="tipo">Tipo: </label>
         {{ formulario.tipo }}
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <p class="flex-center"><input class="btn btn-primary" type='submit' value='Agregar' /></p>
+  <div>
+    <div>
+      <p><input type='submit' value='Agregar' /></p>
     </div>
   </div>
 
